@@ -15,7 +15,7 @@ class Imoveis(models.Model):
     ]
 
     address = models.CharField(max_length=200, default='')
-    tipo = models.CharField(max_length=100, choices=OPTIONS_STATUS, default='')
+    status = models.CharField(max_length=100, choices=OPTIONS_STATUS, default='')
     area = models.IntegerField(max_length=4, default=0)
     bedrooms = models.IntegerField(max_length=4, default=0)
     bathrooms = models.IntegerField(max_length=4, default=0)
