@@ -32,6 +32,10 @@ def contact(request):
 
 # -------- Admin Page
 
+def consulta(request):
+    message_view = Message.objects.all()
+    return render(request,'dashboard.html',{'message':message_view})
+
 # -------- Login View
 def login(request):
     form = LoginForms()
