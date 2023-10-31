@@ -24,7 +24,7 @@ class LoginForms(forms.Form):
         ),
     )
 
-class MessageForm(forms.Form):
+class MessageForms(forms.Form):
     name = forms.CharField(
         label='Full Name:',
         max_length=100,

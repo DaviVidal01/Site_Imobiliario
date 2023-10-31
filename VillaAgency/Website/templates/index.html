@@ -288,30 +288,7 @@
         </div>
       </div>
       <div class="row">
-        {% for x in imoveis %}
-          <div class="col-lg-4 col-md-6">
-            <div class="item">
-              <a href="{% url 'details' x.id %}"><img src="{{ x.path.url }}" alt=""></a>
-              <span class="category">{{ x.tipo }}</span>
-              <h6>${{ x.value }}</h6>
-              <h4><a href="{% url 'details' x.id %}">{{ x.andress }}</a></h4>
-              <ul>
-                <li>Bedrooms: <span>{{ x.bedrooms }}</span></li>
-                <li>Bathrooms: <span>{{ x.bathrooms }}</span></li>
-                <li>Area: <span>{{ x.area }}m2</span></li>
-                <li>Floor: <span>{{ x.floor }}</span></li>
-                <li>Parking: <span>{{ x.parking }} spots</span></li>
-              </ul>
-              <div class="main-button">
-                {% if x.status == "DISPONÍVEL" %}
-                  <a href="{% url 'details' x.id %}">Schedule a visit</a>
-                {% else %}
-                  <a href="#">VENDIDO</a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        {% endfor %}
+        {% include 'partials/user/imoveis.html' %}
       </div>
     </div>
   </div>
@@ -352,39 +329,7 @@
           </div>
         </div>
         <div class="col-lg-5">
-          <form id="contact-form" action="" method="post">
-            <div class="row">
-              <div class="col-lg-12">
-                <fieldset>
-                  <label for="name">Full Name</label>
-                  <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <label for="email">Email Address</label>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <label for="subject">Subject</label>
-                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on" >
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <label for="message">Message</label>
-                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="orange-button">Send Message</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
+          {% include 'partials/user/contact.html' %}
         </div>
       </div>
     </div>
