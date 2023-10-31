@@ -28,7 +28,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action = "{% url 'login' %}" method = "POST">
+        <form action = "" method = "POST">
           {% csrf_token %}
           {% for fiel in user.visible_fields %}
           <div class="mb-3">

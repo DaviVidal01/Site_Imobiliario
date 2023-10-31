@@ -9,7 +9,6 @@ urlpatterns = [
     path('details/<int:id>', views.properties_details, name='properties_details'),
     # ------ Admin Pages
     path('consulta_message/',views.consulta, name="cadastrarP"),
-    path('funcionario/', views.funcionario, name="funcionario"),
     # ------ CRUD
     path('publish/',views.publish_message, name="publish_message"),
 ]

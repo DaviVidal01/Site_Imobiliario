@@ -1,10 +1,10 @@
 {% for x in imoveis %}
   <div class="col-lg-4 col-md-6">
     <div class="item">
-      <a href="{% url 'details' x.id %}"><img src="{{ x.path.url }}" alt=""></a>
+      <a href=""><img src="" alt=""></a>
       <span class="category">{{ x.tipo }}</span>
       <h6>${{ x.value }}</h6>
-      <h4><a href="{% url 'details' x.id %}">{{ x.andress }}</a></h4>
+      <h4><a href="">{{ x.andress }}</a></h4>
       <ul>
         <li>Bedrooms: <span>{{ x.bedrooms }}</span></li>
         <li>Bathrooms: <span>{{ x.bathrooms }}</span></li>
@@ -14,7 +14,7 @@
       </ul>
       <div class="main-button">
         {% if x.status == "DISPONÍVEL" %}
-          <a href="{% url 'details' x.id %}">Schedule a visit</a>
+          <a href="">Schedule a visit</a>
         {% else %}
           <a href="#">VENDIDO</a>
         {% endif %}
